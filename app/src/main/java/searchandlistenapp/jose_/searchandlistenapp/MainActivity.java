@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
@@ -35,6 +36,8 @@ public class MainActivity extends Activity implements
     private Button bt_Play;
     private Button bt_Pause;
     private Button bt_Skip;
+
+    private TextView msj;
 
 
     // TODO: Replace with your client ID
@@ -119,7 +122,8 @@ public class MainActivity extends Activity implements
 
         bt_Buscar.setVisibility(View.VISIBLE);
         bt_Ingresar.setVisibility(View.INVISIBLE);
-        et_NombreCancion.setVisibility(View.VISIBLE);
+        //et_NombreCancion.setVisibility(View.VISIBLE);
+        msj.setVisibility(View.INVISIBLE);
 
         bt_Play.setVisibility(View.VISIBLE);
         bt_Pause.setVisibility(View.VISIBLE);
@@ -131,7 +135,8 @@ public class MainActivity extends Activity implements
 
         bt_Buscar.setVisibility(View.INVISIBLE);
         bt_Ingresar.setVisibility(View.VISIBLE);
-        et_NombreCancion.setVisibility(View.INVISIBLE);
+        //et_NombreCancion.setVisibility(View.INVISIBLE);
+        msj.setVisibility(View.VISIBLE);
 
         bt_Play.setVisibility(View.INVISIBLE);
         bt_Pause.setVisibility(View.INVISIBLE);
@@ -158,6 +163,7 @@ public class MainActivity extends Activity implements
     private void InitComponentes()
     {
         et_NombreCancion = (EditText) findViewById(R.id.et_NombreCancion);
+        msj = (TextView) findViewById(R.id.tv_Msj);
 
         bt_Ingresar = (Button) findViewById(R.id.button_IniciarSesion);
         bt_Ingresar.setOnClickListener(new View.OnClickListener() {
@@ -203,14 +209,7 @@ public class MainActivity extends Activity implements
 
     private void BuscarCancion(String pNombreCancion)
     {
-        // "https://open.spotify.com/search/playlists/" + pNombreCancion
-        //https://open.spotify.com/search/results/Metaraus
-        // This is the line that plays a song.
-
-        //HttpGetRequest mirequest = new HttpGetRequest();
-        //Log.d("MAEEEE", mirequest.doInBackground("https://open.spotify.com/search/results/Metaraus"));
-
-        mPlayer.playUri(null, "spotify:playlist:1Zy3Fpd14zvi2Iax3NWqdL", 0, 0); // playlist
+        mPlayer.playUri(null, "spotify:playlist:2n8QZI007RwrlXofXp1Dla", 0, 0); // playlist
     }
 
     private void SiguienteCancion()

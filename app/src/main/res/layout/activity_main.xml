@@ -75,10 +75,9 @@
         android:layout_marginBottom="116dp"
         android:background="@android:color/transparent"
         android:enabled="true"
-        android:text="Buscar"
+        android:text="Reproducir playlist"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
-        android:textSize="20sp"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="370dp" />
@@ -106,5 +105,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="139dp"
         android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tv_Msj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_Play"
+        android:layout_centerHorizontal="true"
+        android:text="*Requiere una cuenta de Spotify premium" />
 
 </RelativeLayout>
